@@ -1,6 +1,6 @@
 # voxel-debug
 
-Debug helpers for [voxel.js](http://voxeljs.org).
+Debug helpers for [voxel.js](http://voxeljs.org) using [dat-gui](http://workshop.chromeexperiments.com/examples/gui/).
 
 ## example
 
