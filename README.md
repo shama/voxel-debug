@@ -52,6 +52,7 @@ npm install voxel-debug
 Use [browserify](http://browserify.org) to `require('voxel-debug')`.
 
 ## release history
+* 0.2.0 - Add open/close methods
 * 0.1.0 - initial release
 
 ## license

@@ -5,6 +5,7 @@ function Debug(opts) {
   this.liveData = true
   this._datum = []
   this._init()
+  this.open()
 }
 module.exports = function(opts) {
   return new Debug(opts)
@@ -17,6 +18,24 @@ Debug.prototype.axis = function(p, size) {
   helper.position.set(p[0], p[1], p[2])
   this.game.scene.add(helper)
   return helper
+}
+
+Debug.prototype.open = function() {
+  (function open(folder) {
+    folder.open()
+    for (var i in folder.__folders) {
+      open(folder.__folders[i])
+    }
+  }(this.folder))
+}
+
+Debug.prototype.close = function() {
+  (function close(folder) {
+    folder.close()
+    for (var i in folder.__folders) {
+      close(folder.__folders[i])
+    }
+  }(this.folder))
 }
 
 Debug.prototype._init = function() {
