@@ -1,0 +1,39 @@
+{
+  "name": "voxel-debug",
+  "description": "Debug helpers for voxel.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/shama/voxel-debug",
+  "author": {
+    "name": "Kyle Robinson Young",
+    "email": "kyle@dontkry.com",
+    "url": "http://dontkry.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shama/voxel-debug.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shama/voxel-debug/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/shama/voxel-debug/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/beefy demo.js"
+  },
+  "dependencies": {
+    "dat-gui": "~0.5.0"
+  },
+  "devDependencies": {
+    "beefy": "~0.3.0",
+    "voxel-engine": "~0.18.1",
+    "voxel-player": "~0.1.0",
+    "voxel-walk": "0.0.5"
+  }
+}
