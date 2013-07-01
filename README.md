@@ -28,6 +28,10 @@ var folder = gui.addFolder('Item Position')
 folder.add(item.position, 'x')
 folder.add(item.position, 'y')
 folder.add(item.position, 'z')
+
+// OR just let this lib create a dat-gui instance for you
+var debug = require('voxel-debug')(game)
+var folder = debug.gui.addFolder('My Own Thing')
 ```
 
 Please goto [http://workshop.chromeexperiments.com/examples/gui/](http://workshop.chromeexperiments.com/examples/gui/) for more examples on using dat-gui.
@@ -51,6 +55,12 @@ Opens all the folders.
 
 #### `debug.close()`
 Closes all the folders.
+
+#### `debug.gui`
+Contains the active instance of dat-gui.
+
+#### `debug.folder`
+Contains the active instance of the `debug` folder that contains
 
 ## install
 
