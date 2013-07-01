@@ -36,7 +36,12 @@ Please goto [http://workshop.chromeexperiments.com/examples/gui/](http://worksho
 
 ## api
 
-### `var debug = require('voxel-debug')({game: game, gui: gui})`
+### `var createDebug = require('voxel-debug')`
+Returns a function to create a debugger:
+
+```js
+var debug = createDebug({game: game, gui: gui})
+```
 
 #### `debug.axis([position, size])`
 Displays a new axis at `position` and with `size`. Returns the `AxisHelper`.
