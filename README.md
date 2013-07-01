@@ -38,8 +38,14 @@ Please goto [http://workshop.chromeexperiments.com/examples/gui/](http://worksho
 
 ### `var debug = require('voxel-debug')({game: game, gui: gui})`
 
-### `debug.axis([position, size])`
+#### `debug.axis([position, size])`
 Displays a new axis at `position` and with `size`. Returns the `AxisHelper`.
+
+#### `debug.open()`
+Opens all the folders.
+
+#### `debug.close()`
+Closes all the folders.
 
 ## install
 
