@@ -46,6 +46,7 @@ Debug.prototype._init = function() {
   this._player()
   this._camera()
   this._chunks()
+  this._render()
   function update(folder) {
     for (var i in folder.__controllers) {
       folder.__controllers[i].updateDisplay()
@@ -125,4 +126,12 @@ Debug.prototype._chunks = function() {
   folder.add(d, 'chunksLoaded')
   folder.add(d, 'pendingChunks')
   folder.add(d, 'voxels')
+}
+
+Debug.prototype._render = function() {
+  var self = this
+  var folder = this.folder.addFolder('render')
+  //older.add(this.game, 'mesher') // TODO
+  folder.add(this.game, 'meshType', ['surfaceMesh', 'wireMesh'])
+  // TODO: refresh chunks on change
 }
