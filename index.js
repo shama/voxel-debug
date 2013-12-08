@@ -131,9 +131,14 @@ Debug.prototype._chunks = function() {
 Debug.prototype._render = function() {
   var self = this
   var folder = this.folder.addFolder('render')
-  //older.add(this.game, 'mesher') // TODO
+  this.mesherName = 'greedy'
+  folder.add(this, 'mesherName', ['greedy', 'culled']).onChange(function(value) {
+    self.game.mesher = require('voxel').meshers[value]
+    self.game.showAllChunks()
+  })
+
   folder.add(this.game, 'meshType', ['surfaceMesh', 'wireMesh']).onChange(function(value) {
     // refresh chunks on change
     self.game.showAllChunks() 
-  });
+  })
 }

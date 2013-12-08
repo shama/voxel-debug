@@ -34,6 +34,7 @@
     "beefy": "~0.3.0",
     "voxel-engine": "~0.18.1",
     "voxel-player": "~0.1.0",
-    "voxel-walk": "0.0.5"
+    "voxel-walk": "0.0.5",
+    "voxel": "0.3.1"
   }
 }
