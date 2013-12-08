@@ -132,6 +132,8 @@ Debug.prototype._render = function() {
   var self = this
   var folder = this.folder.addFolder('render')
   //older.add(this.game, 'mesher') // TODO
-  folder.add(this.game, 'meshType', ['surfaceMesh', 'wireMesh'])
-  // TODO: refresh chunks on change
+  folder.add(this.game, 'meshType', ['surfaceMesh', 'wireMesh']).onChange(function(value) {
+    // refresh chunks on change
+    self.game.showAllChunks() 
+  });
 }
